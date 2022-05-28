@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+  	<form action="">
+  		<input type="text" id="stringko" name="stringko" readonly><br><br>
+ 	 	<input type="text" id="p1" name="p1" readonly>
+  	</form>
+</body>
+
+<script type="text/javascript">
+ 	document.getElementById('stringko').value = create_random_string(10)
+
+ 	function create_random_string(string_length){
+ 	var random_string = '';
+ 	var character = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz'
+
+ 	for (var i, i = 0; i < string_length; i++){
+ 		random_string += character.charAt(Math.floor(Math.random() * character.length))
+ 	}
+ 	return random_string
+
+ 	}
+</script>
+
+<script type="text/javascript">
+	
+	var today = new Date();
+	var date = (today.getMonth()+1)+'-'+today.getDate()+'-'+today.getFullYear();
+	document.getElementById('p1').value = date;
+
+</script>
+
+</html>
